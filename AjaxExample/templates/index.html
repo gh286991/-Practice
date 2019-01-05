@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" >
+    <title>Ajax範例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}" />
+    <script type="text/javascript" src="{% static 'js/main.js' %}">
+         var csrftoken = '{{ csrf_token }}';
+    </script>
+</head>
+<div class="Box"> 
+  <div class="Conetent">
+    <div class="add">Ajax加法範例</div>
+    <div class="answer">
+      <div class="input">
+        <input type="number" id="A"/>+ 
+        <input type="number" id="B"/>=
+        <div class="result" id="result"></div>
+      </div>
+      <div class="button">
+        <button id="Calculas" onclick="Postdata()">Calculas</button>
+      </div>
+    </div>
+    <div class="Description">
+      <hr/>
+      <div class="text">通過Ajax技術傳送POST到後端伺服器達到無刷更新</div>
+    </div>
+  </div>
+</div>
+</html>
